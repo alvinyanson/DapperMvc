@@ -12,6 +12,6 @@ namespace DapperMvc.Data.Repository
 
         Task<Person?> GetByIdAsync(int id);
 
-        Task<IEnumerable<Person>?> GetAllsync();
+        Task<IEnumerable<Person>?> GetAllAsync();
     }
 }

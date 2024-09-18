@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Person>
+
+<h3>People list</h3>
+
+<div class="my-2">
+
+    <a asp-controller="Person" asp-action="Add" class="btn btn-primary my-2">Add More</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in Model)
+            {
+                <tr>
+                    <td>@person.Name</td>
+                    <td>@person.Email</td>
+                    <td>@person.Address</td>
+                    <td>
+                        <a class="btn btn-primary" asp-controller="Person" asp-action="Edit" asp-route-id="@person.Id">Edit</a>
+                        <a class="btn btn-danger" asp-controller="Person" asp-action="Delete" asp-route-id="@person.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -63,7 +63,7 @@ namespace DapperMvc.Data.Repository
             return result.FirstOrDefault();
         }
 
-        public async Task<IEnumerable<Person>?> GetAllsync()
+        public async Task<IEnumerable<Person>?> GetAllAsync()
         {
             string query = "sp_get_people";
 
